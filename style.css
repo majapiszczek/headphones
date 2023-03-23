@@ -1,0 +1,144 @@
+:root {
+  --gray: #6c757d;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+hr {
+  width: 100%;
+  padding: 0;
+  margin: 28px 0;
+  border: 1px solid #e9ecef;
+}
+
+.container {
+  max-width: 950px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+.description-panel {
+  padding: 110px 50px;
+}
+
+.gallery {
+  background-color: #e3e7ea;
+  background-image: url(images/gallery1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 45px;
+  line-height: 54px;
+  padding: 0;
+  margin: 0;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+
+.security-info {
+  color: var(--gray);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.color-info {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: var(--gray);
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.color-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50px;
+  margin: 20px 20px 0 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.color1 {
+  background-color: #212529;
+}
+
+.color2 {
+  background-color: #22223b;
+}
+
+.color3 {
+  background-color: #4a4e69;
+}
+
+.color4 {
+  background-color: #9a8c98;
+}
+
+.color5 {
+  background-color: #c9ada7;
+}
+
+.color6 {
+  background-color: #f2e9e4;
+}
+
+.color7 {
+  background-color: #e9ecef;
+}
+
+.price-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  color: var(--gray);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.buy-button {
+  text-transform: uppercase;
+  color: white;
+  background-color: #6f6f6f;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  padding: 10px 14px;
+  border-radius: 50px;
+  border: none;
+}
