@@ -33,6 +33,9 @@ hr {
 .gallery {
   position: relative;
   background-color: #e3e7ea;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .title {
@@ -185,6 +188,7 @@ hr {
 
 .buy-button:hover {
   padding-right: 30px;
+  background-color: #434141;
 }
 
 .buy-button:hover::after {
@@ -196,6 +200,7 @@ hr {
   margin: 0;
   padding: 0;
   position: relative;
+  transition: transform 400ms ease-in-out;
 }
 
 .gallery-slide-item {
@@ -242,8 +247,13 @@ hr {
   padding: 1px;
   margin: 0 10px 11px 0;
   background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .gallery-dot.active {
   background: black;
+}
+
+.hidden {
+  display: none;
 }
