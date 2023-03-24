@@ -16,8 +16,43 @@
   <body>
     <div class="container">
       <div class="gallery">
-        <div></div>
-        <button></button>
+        <a href="#" class="arrow previous">
+          <img src="images/next-img.png" alt="Previous" />
+        </a>
+        <div class="gallery-slide">
+          <ul class="gallery-slide-list">
+            <li class="gallery-slide-item">
+              <img
+                src="images/gallery1.png"
+                alt="BeoPlay H7"
+                class="gallery-image"
+              />
+            </li>
+            <li class="gallery-slide-item">
+              <img
+                src="images/gallery2.png"
+                alt="BeoPlay H7"
+                class="gallery-image"
+              />
+            </li>
+            <li class="gallery-slide-item">
+              <img
+                src="images/gallery3.png"
+                alt="BeoPlay H7"
+                class="gallery-image"
+              />
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="arrow next">
+          <img src="images/next-img.png" alt="Next" />
+        </a>
+
+        <div class="gallery-dots">
+          <button class="gallery-dot active"></button>
+          <button class="gallery-dot"></button>
+          <button class="gallery-dot"></button>
+        </div>
       </div>
       <div class="description-panel">
         <h1 class="title">BeoPlay H7</h1>
@@ -29,6 +64,8 @@
           Borem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
         <hr />
+        <img src="/images/lock.png" alt="security" class="lock" />
+
         <h3 class="security-info">secure shopping</h3>
         <hr />
         <h4 class="color-info">choose your color</h4>
@@ -48,5 +85,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

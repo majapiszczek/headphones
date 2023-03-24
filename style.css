@@ -31,10 +31,8 @@ hr {
 }
 
 .gallery {
+  position: relative;
   background-color: #e3e7ea;
-  background-image: url(images/gallery1.png);
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .title {
@@ -60,7 +58,13 @@ hr {
   line-height: 21px;
   text-transform: uppercase;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 30px;
+  display: inline;
+}
+
+.lock {
+  margin: 0 10px 0 0;
+  position: absolute;
 }
 
 .color-info {
@@ -79,6 +83,8 @@ hr {
 }
 
 .color-button {
+  position: relative;
+  box-sizing: border-box;
   width: 20px;
   height: 20px;
   border: none;
@@ -86,6 +92,30 @@ hr {
   margin: 20px 20px 0 0;
   padding: 0;
   cursor: pointer;
+}
+
+.color-button::before {
+  content: "";
+  border: 2px solid #e3e7ea;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.color-button:hover::before {
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+  opacity: 1;
+}
+
+.color-button:active::before {
+  border: 2px solid var(--gray);
 }
 
 .color1 {
@@ -118,7 +148,6 @@ hr {
 
 .price-info {
   display: flex;
-  justify-content: space-between;
 }
 
 .price {
@@ -127,18 +156,94 @@ hr {
   font-weight: 500;
   line-height: 48px;
   padding: 0;
-  margin: 0;
+  margin: 0 64px 0 0;
   text-transform: uppercase;
 }
 
 .buy-button {
+  box-sizing: border-box;
   text-transform: uppercase;
   color: white;
   background-color: #6f6f6f;
   font-size: 12px;
   font-weight: 700;
   line-height: 15px;
-  padding: 10px 14px;
+  padding: 10px 17px;
   border-radius: 50px;
   border: none;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.buy-button::after {
+  content: url(images/arrow.png);
+  position: absolute;
+  margin: 0 0 0 10px;
+  opacity: 0;
+  transition: all 150ms ease-in-out;
+}
+
+.buy-button:hover {
+  padding-right: 30px;
+}
+
+.buy-button:hover::after {
+  opacity: 1;
+}
+
+.gallery-slide-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.gallery-slide-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-image {
+  display: block;
+  margin: 32px auto;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin: 0 30px;
+}
+
+.previous {
+  transform: rotate(180deg);
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.gallery-dots {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.gallery-dot {
+  border: none;
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+  padding: 1px;
+  margin: 0 10px 11px 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.gallery-dot.active {
+  background: black;
 }
