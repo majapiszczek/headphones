@@ -49,10 +49,9 @@ const updateDots = (currentDot, targetDot) => {
 
 const hideArrows = (images, targetIndex, prevButton, nextButton) => {
   if (targetIndex === 0) {
-    nextButton.classList.remove("hidden");
     prevButton.classList.add("hidden");
-  }
-  if (targetIndex === images.length - 1) {
+    nextButton.classList.remove("hidden");
+  } else if (targetIndex === images.length - 1) {
     prevButton.classList.remove("hidden");
     nextButton.classList.add("hidden");
   } else {
