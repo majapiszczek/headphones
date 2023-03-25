@@ -175,7 +175,7 @@ hr {
   border-radius: 50px;
   border: none;
   cursor: pointer;
-  transition: all 150ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .buy-button::after {
