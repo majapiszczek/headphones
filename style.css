@@ -18,6 +18,7 @@ hr {
 }
 
 .container {
+  margin: 20px;
   max-width: 950px;
   width: 100%;
   display: grid;
@@ -151,6 +152,7 @@ hr {
 
 .price-info {
   display: flex;
+  align-items: center;
 }
 
 .price {
@@ -159,7 +161,7 @@ hr {
   font-weight: 500;
   line-height: 48px;
   padding: 0;
-  margin: 0 64px 0 0;
+  margin-right: 64px;
   text-transform: uppercase;
 }
 
@@ -168,6 +170,7 @@ hr {
   text-transform: uppercase;
   color: white;
   background-color: #6f6f6f;
+  height: 100%;
   font-size: 12px;
   font-weight: 700;
   line-height: 15px;
@@ -256,4 +259,21 @@ hr {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 920px) {
+  .price-info {
+    display: block;
+  }
+  .price {
+    margin: 0 0 20px;
+  }
+}
+
+@media (max-width: 756px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    height: 100%;
+  }
 }
